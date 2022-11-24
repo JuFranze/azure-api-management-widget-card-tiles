@@ -5,6 +5,11 @@ export type Values = {
   actionUrl: string
 }
 
+export type Product = {
+  name: string
+  properties: Record<any, any>
+}
+
 export const valuesDefault: Readonly<Values> = Object.freeze({
   label1: "Email",
   label2: "Message",

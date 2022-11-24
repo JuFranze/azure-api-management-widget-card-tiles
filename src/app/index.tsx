@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react"
 import {useRequest, useSecrets, useValues} from "../hooks"
+import { Product } from "../values"
 
 
 const App = () => {
@@ -7,7 +8,7 @@ const App = () => {
   const {userId} = useSecrets()
   const request = useRequest()
   //State variable to store products empty on first render and updated after API call
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<Product[]>([]);
 
 
   // query products from APIM portal via API 
@@ -15,7 +16,7 @@ const App = () => {
     return request('/products')
     .then(response => response.json())
     .then(response =>{
-      //console.log(response.value)
+      console.log(response.value)
       setProducts(response.value)
     })
     .catch(e=>{
@@ -29,7 +30,7 @@ const App = () => {
     fetchData();
     //console.log("Products: ", products)
    
-  }, [userId, products])
+  }, [userId])
 
 
   return (
