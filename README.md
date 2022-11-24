@@ -10,9 +10,8 @@ This widget get the Products of your APIM instance and displays them in a card l
 ## Prerequist
 
 You will need node version 14 or higher to run this widget in APIM Dev Portal.
-Install: 
-npm install axios
-npm install azure-arm-apimanagement
+Test the widget locally: npm start
+Set config in the deploy.js file under resourceID: /<subscriptionID>/resourceGroups/<your resource group>/providers/Microsoft.ApiManagement/service/<your APIM Service name>
 
 
 ## Deploy to APIM Dev Portal
