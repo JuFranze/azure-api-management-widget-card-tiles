@@ -15,7 +15,7 @@ const App = () => {
     return request('/products')
     .then(response => response.json())
     .then(response =>{
-      console.log(response.value)
+      //console.log(response.value)
       setProducts(response.value)
     })
     .catch(e=>{
